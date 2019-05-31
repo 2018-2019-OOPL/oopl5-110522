@@ -1,7 +1,5 @@
 package pl.edu.ur.oopl5.companyAndEmployees.company.abstractClasses;
 
-/**
- */
 public abstract class AbstractPerson {
 
     protected String name;

@@ -4,10 +4,10 @@ package pl.edu.ur.oopl5.companyAndEmployees.company;
 import pl.edu.ur.oopl5.companyAndEmployees.company.abstractClasses.AbstractCompany;
 import pl.edu.ur.oopl5.companyAndEmployees.employee.Employee;
 
-/**
- */
 public class Company extends AbstractCompany {
 
+    public int e;
+    
     public Company(int n) {
         super(n);
     }

@@ -1,5 +1,7 @@
 package pl.edu.ur.oopl5.stack;
 
+import java.util.EmptyStackException;
+
 public class Stack extends AbstractStack {
 
     private int n;
@@ -21,21 +23,21 @@ public class Stack extends AbstractStack {
     }
 
     @Override
-    public void push(int i) throws ArrayIndexOutOfBoundsException {
+    public void push(int i) throws EmptyStackException {
         if (index < tab.length) {
             tab[index] = i;
             index++;
 
         } else {
-            throw new ArrayIndexOutOfBoundsException(
+            throw new StackOverflowError(
                     "Przepe³nienie stosu, operacja nie powiod³a siê");
         }
     }
 
     @Override
-    public int pop() throws IndexOutOfBoundsException {
+    public int pop() throws EmptyStackException {
         if (index <= 0) {
-            throw new IndexOutOfBoundsException(
+            throw new StackOverflowError(
                     "Stos jest pusty, operacja nie powiod³a siê");
         }
 
