@@ -1,9 +1,8 @@
-package pl.edu.ur.oopl5.companyAndEmployees.employee;
+/*package pl.edu.ur.oopl5.companyAndEmployees.employee;
 
 import pl.edu.ur.oopl5.companyAndEmployees.company.abstractClasses.AbstractPerson;
 
-/**
- */
+
 public class Employee extends AbstractPerson implements EmployeeInterface {
 
     @Override
@@ -46,3 +45,4 @@ public class Employee extends AbstractPerson implements EmployeeInterface {
 
 
 }
+*/

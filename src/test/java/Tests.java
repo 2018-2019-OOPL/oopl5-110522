@@ -14,13 +14,13 @@ public class Tests {
     @Test(expected = EmptyStackException.class, timeout = 1000)
     public void testEx3IsEmpty() {
         Stack stack = new Stack(5);
-//        try{
-//            if (stack.isEmpty() == true) {
+        try{
+            if (stack.isEmpty() == true) {
         stack.pop();
-//                Assert.fail("There should be EmptyStackException, at least any Exception...");
-//            }
-//        } catch (Exception e){
-//            Assert.assertThat(e, (Matcher<? super Exception>) e);
+                Assert.fail("There should be EmptyStackException, at least any Exception...");
+            }
+        } catch (Exception e){
+            Assert.assertThat(e, (Matcher<? super Exception>) e);
     }
 
     @Test(expected = StackOverflowError.class, timeout = 1000)
@@ -41,7 +41,7 @@ public class Tests {
 
     }
 
-    @Test(timeout = 1000)
+ /* @Test(timeout = 1000)
     public void testEx5EmployeeAndCompany() {
         Employee employee = new Employee("Adam", "Nowak", 24, "Junior SocialMedia Specialist");
         Employee employee1 = new Employee("Jan", "Kowalski", 45, "Manager");
@@ -74,6 +74,5 @@ public class Tests {
         n.setNumber("3");
         Assert.assertEquals(6, n.multiply(2));
         Assert.assertEquals(6, n.factorial());
-    }
-
+    }*/
 }

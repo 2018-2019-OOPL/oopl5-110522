@@ -1,24 +1,59 @@
 package pl.edu.ur.oopl5.stack;
 
-import java.util.EmptyStackException;   
-
-/**
- */
 public class Stack extends AbstractStack {
 
-    @Override
-    public void push(int i) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    private int n;
+    private int[] tab;
+    private int rozmiar;
+    private int index;
+
+    public Stack(int rozmiar) {
+        tab = new int[rozmiar];
+        index = 0;
+    }
+
+    int getMaximumStackSize() {
+        return tab.length;
+    }
+
+    int getSize() {
+        return index;
     }
 
     @Override
-    public int pop() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void push(int i) throws ArrayIndexOutOfBoundsException {
+        if (index < tab.length) {
+            tab[index] = i;
+            index++;
+
+        } else {
+            throw new ArrayIndexOutOfBoundsException(
+                    "Przepe³nienie stosu, operacja nie powiod³a siê");
+        }
+    }
+
+    @Override
+    public int pop() throws IndexOutOfBoundsException {
+        if (index <= 0) {
+            throw new IndexOutOfBoundsException(
+                    "Stos jest pusty, operacja nie powiod³a siê");
+        }
+
+        int temp = tab[index - 1];
+        index--;
+        return temp;
     }
 
     @Override
     public boolean isEmpty() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        if (index == 0) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
+   
+
 }
+
